@@ -1,0 +1,37 @@
+Assignment-14.1 (Acadgild)
+By: Paras Varshney
+
+Q.1) What is the difference between Internal Storage & External Storage?
+Ans)
+	1) Internal storage stores the data of the app inside the phone's memory which is inbuilt in the phone whereas in External storage the data is stored inside a SD card which is placed externally in the phone and can be removed anytime.
+	2) Internal memory is less in size as compared to External memory.
+	3) Internal memory is more secured as compared to External memory.
+	4) Internal storage do not require any permission for read and write data access but External storage requires WRITE_EXTERNAL_STORAGE permission for data writing also it can read the data as well if it has this permission else we can provide READ_EXTERNAL_STORAGE permission for reading data.
+	5) Data in Internal storage can't be accessed by any user or any other app except the app creating it whereas the data in the external memory resides for user who can access it anytime (this justifies third point).
+	6) External storage sometimes needs a drive controller while internal operates using components on the motherboard.
+
+
+Q.2) For how long the data resides in the cache?
+Ans)
+	Data in cache is Temporarily stored and resided in there till it is not overridden by any other data. 
+	Meaning to say that the data is stored in blocks and each block contains the data in it to be stored till any other block of same or less sized data comes and takes it's place and resides there, then the old data is no more there in that block.
+	If you don't have any memory issues it will reside there, but if memory issues come into picture and we fall short of data then the more important data will come and take place in cache memory and overrides the old data.
+	Also, most importantly data will remain in cache till we clear the cache from the app. As soon as user clears the cache of that app from his phone that moment only the data is lost from cache.
+	Meaning to say that the data is stored in blocks and each block contains the data in it to be stored till any other block of same or less sized data comes and takes it's place and resides there, then the old data is no more there in that block.
+	Necessarily, if the power of the system goes off then the data in the cache will be erased as it is a volatile memory so it depends on the power supply.
+
+Q.3) What are the critical Permissions and Normal Permissions? What are the examples of each?
+Ans)
+1) Normal Permission:
+    Many permissions are designated as PROTECTION_NORMAL, which indicates that there's no great risk to the user's privacy or security in letting apps have those permissions. For example, users would reasonably want to know whether an app can read their contact information, so users have to grant this permission explicitly. By contrast, there's no great risk in allowing an app to   vibrate the device, so that permission is designated as normal. if an app declares in its manifest that it needs a normal permission, the system automatically grants the app that permission at install time. The system does not prompt the user to grant normal permissions, and users cannot revoke these permissions. 
+       	Ex.) ACCESS_LOCATION_EXTRA_COMMANDS, ACCESS_NETWORK_STATE, ACCESS_NOTIFICATION_POLICY, ACCESS_WIFI_STATE, BLUETOOTH, etc.
+
+2) External Permission:
+	Many permissions which indicates that there's great risk to the user's privacy or security in letting apps have those permissions. For example, users would reasonably want to enter the app so users have to grant this permission explicitly. By contrast, there's great risk in allowing an app to vibrate the device, so that permission is designated as critical. If an app declares in its manifest that it needs a critical permission, the system automatically checks the app that permission at install time. The system does not allow the user to grant critical permissions without checking. 
+		Ex.) CAMERA, READ_CONTACTS, WRITE_CONTACTS, GET_ACCOUNTS, WRITE_CALENDAR, READ_CALENDAR, etc.
+
+
+
+
+
+
